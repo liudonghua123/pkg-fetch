@@ -3,21 +3,25 @@
 > [!IMPORTANT]  
 > `pkg-fetch` has been deprecated with `3.5` as the last release. There are a number of successful forked versions of `pkg-fetch` already with various feature additions. Further, we’re excited about Node.js 21’s support for [single executable applications](https://nodejs.org/api/single-executable-applications.html). Thank you for the support and contributions over the years. The repository will remain open and archived.
 
+**This fork only adds node v20 support, used within [@liudonghua123/pkg](https://github.com/liudonghua123/pkg).**
+
+**_I have also started a similar project on https://github.com/liudonghua123/node-sea which use offcial [single executable applications](https://nodejs.org/api/single-executable-applications.html) feature. Just try it as easy as `npm i -g @liudonghua123/node-sea && node-sea -h`._**
+
 A utility to fetch or build patched Node binaries used by [pkg](https://github.com/vercel/pkg) to generate executables. This repo hosts prebuilt binaries in [Releases](https://github.com/vercel/pkg-fetch/releases).
 
 ## Binary Compatibility
 
-| Node                                                                              | Platform    | Architectures             | Minimum OS version                                                                |
-| --------------------------------------------------------------------------------- | ----------- | ------------------------- | --------------------------------------------------------------------------------- |
-| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18 | alpine      | x64, arm64                | 3.7.3, other distros with musl libc >= 1.1.18                                     |
-| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18 | linux       | x64                       | Enterprise Linux 7, Ubuntu 14.04, Debian jessie, other distros with glibc >= 2.17 |
-| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18 | linux       | arm64                     | Enterprise Linux 8, Ubuntu 18.04, Debian buster, other distros with glibc >= 2.27 |
-| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18 | linuxstatic | x64, arm64                | Any distro with Linux Kernel >= 2.6.32 (>= 3.10 strongly recommended)             |
-| 16, 18                                                                            | linuxstatic | armv7<sup>[2](#fn2)</sup> | Any distro with Linux Kernel >= 2.6.32 (>= 3.10 strongly recommended)             |
-| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18 | macos       | x64                       | 10.13                                                                             |
-| 14, 16, 18                                                                        | macos       | arm64<sup>[3](#fn3)</sup> | 11.0                                                                              |
-| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18 | win         | x64                       | 8.1                                                                               |
-| 14, 16, 18                                                                        | win         | arm64                     | 10                                                                                |
+| Node                                                                                  | Platform    | Architectures             | Minimum OS version                                                                |
+| ------------------------------------------------------------------------------------- | ----------- | ------------------------- | --------------------------------------------------------------------------------- |
+| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18, 20 | alpine      | x64, arm64                | 3.7.3, other distros with musl libc >= 1.1.18                                     |
+| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18, 20 | linux       | x64                       | Enterprise Linux 7, Ubuntu 14.04, Debian jessie, other distros with glibc >= 2.17 |
+| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18, 20 | linux       | arm64                     | Enterprise Linux 8, Ubuntu 18.04, Debian buster, other distros with glibc >= 2.27 |
+| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18, 20 | linuxstatic | x64, arm64                | Any distro with Linux Kernel >= 2.6.32 (>= 3.10 strongly recommended)             |
+| 16, 18, 20                                                                            | linuxstatic | armv7<sup>[2](#fn2)</sup> | Any distro with Linux Kernel >= 2.6.32 (>= 3.10 strongly recommended)             |
+| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18, 20 | macos       | x64                       | 10.13                                                                             |
+| 14, 16, 18, 20                                                                        | macos       | arm64<sup>[3](#fn3)</sup> | 11.0                                                                              |
+| 8<sup>[1](#fn1)</sup>, 10<sup>[1](#fn1)</sup>, 12<sup>[1](#fn1)</sup>, 14, 16, 18, 20 | win         | x64                       | 8.1                                                                               |
+| 14, 16, 18, 20                                                                        | win         | arm64                     | 10                                                                                |
 
 <em id="fn1">[1]</em>: end-of-life, may be removed in the next major release.
 
